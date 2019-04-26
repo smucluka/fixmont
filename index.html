@@ -317,25 +317,26 @@
           <p>Nazovite nas ili ispunite formular za kontakt i odgovoriti ćemo vam na email najkraćem mogućem roku.</p>
         </div>
 
-        <form name="sentMessage" id="contactForm" method="POST" action="https://formspree.io/info@fix-mont.hr">
+        <!-- <form name="sentMessage" id="contactForm" method="POST" action="https://formspree.io/info@fix-mont.hr"> -->
+		<form name="sentMessage" id="contactForm">
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input name="ime" type="text" id="name" class="form-control" placeholder="Vaše ime" required="required">
+                <input name="ime" type="text" id="name-form" class="form-control" placeholder="Vaše ime" required="required">
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <input name="posiljatelj" type="email" id="email" class="form-control" placeholder="Vaša email adresa" required="required">
+                <input name="posiljatelj" type="email" id="email-form" class="form-control" placeholder="Vaša email adresa" required="required">
               </div>
             </div>
           </div>
           <div class="form-group">
-            <textarea name="poruka" style="resize: none;" name="message" id="message" class="form-control" rows="4" placeholder="Poruka" required></textarea>
+            <textarea name="poruka" style="resize: none;" name="message" id="message-form" class="form-control" rows="4" placeholder="Poruka" required></textarea>
           </div>
           <div id="success"></div>
           <button type="submit" class="btn btn-custom btn-lg">Pošalji poruku</button>
-        </form>        
+        </form>
       </div>
     </div>
     <div class="col-md-3 col-md-offset-1 contact-info">
@@ -370,6 +371,24 @@
 <script type="text/javascript" src="js/nivo-lightbox.js"></script> 
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/smtp.js"></script>
+<script>
+
+$('#contactForm').submit(function () {
+	Email.send({
+		SecureToken : "830ea42b-6482-4a06-bb64-8660db3721dc",
+		To : 'fix.mont.form@gmail.com', //treba zamijeniti sa info@fix-mont.hr
+		From : document.querySelector("#email-form").value,
+		Subject : "Upit od: " + document.querySelector("#name-form").value,
+		Body : document.querySelector("#message-form").value
+	}).then(
+  alert("Upit je uspješno poslan")
+  //drugacije ispisati success message
+);
+ return false;
+});
+
+</script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
 <script>
 window.addEventListener("load", function(){
