@@ -318,21 +318,24 @@
         </div>
 
         <!-- <form name="sentMessage" id="contactForm" method="POST" action="https://formspree.io/info@fix-mont.hr"> -->
-		<form name="sentMessage" id="contactForm">
+        <form name="sentMessage" id="contactForm" novalidate>
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <input name="ime" type="text" id="name-form" class="form-control" placeholder="Vaše ime" required="required">
+                <input type="text" id="name" class="form-control" placeholder="Ime" required="required">
+                <p class="help-block text-danger"></p>
               </div>
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <input name="posiljatelj" type="email" id="email-form" class="form-control" placeholder="Vaša email adresa" required="required">
+                <input type="email" id="email" class="form-control" placeholder="Email" required="required">
+                <p class="help-block text-danger"></p>
               </div>
             </div>
           </div>
           <div class="form-group">
-            <textarea name="poruka" style="resize: none;" name="message" id="message-form" class="form-control" rows="4" placeholder="Poruka" required></textarea>
+            <textarea name="message" id="message" class="form-control" rows="4" placeholder="Poruka" required></textarea>
+            <p class="help-block text-danger"></p>
           </div>
           <div id="success"></div>
           <button type="submit" class="btn btn-custom btn-lg">Pošalji poruku</button>
@@ -371,42 +374,7 @@
 <script type="text/javascript" src="js/nivo-lightbox.js"></script> 
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
 <script type="text/javascript" src="js/main.js"></script>
-<script type="text/javascript" src="js/smtp.js"></script>
-<script>
+<script type="text/javascript" src="js/contact_me.js"></script>
 
-$('#contactForm').submit(function () {
-	Email.send({
-		SecureToken : "830ea42b-6482-4a06-bb64-8660db3721dc",
-		To : 'info@fix-mont.hr', //treba zamijeniti sa info@fix-mont.hr
-		From : document.querySelector("#email-form").value,
-		Subject : "Upit od: " + document.querySelector("#name-form").value,
-		Body : document.querySelector("#message-form").value
-	}).then(
-  alert("Upit je uspješno poslan")
-  //drugacije ispisati success message
-);
- return false;
-});
-
-</script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-<script>
-window.addEventListener("load", function(){
-window.cookieconsent.initialise({
-  "palette": {
-    "popup": {
-      "background": "#252e39"
-    },
-    "button": {
-      "background": "#14a7d0"
-    }
-  },
-  "content": {
-    "message": "Naša web stranica koristi kolačiće kako bi Vam omogućili najbolje korisničko iskustvo.",
-    "dismiss": "U redu",
-    "link": "Saznajte više"
-  }
-})});
-</script>-->
 </body>
 </html>
