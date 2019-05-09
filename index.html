@@ -7,16 +7,8 @@
 <meta name="description" content="FIX MONT (fix-mont) je obrt specijaliziran za montažu namještaja. Ukoliko trebate i izradu namještaja po mjeri, također ste na pravom mjestu. Fix mont nudi usluge: montaža sobe, renoviranje sobe, montaža kuhinje, renoviranje kuhinje, izrada drvenih ograda, polaganje laminata itd...>
 <meta name="author" content="methIT Dev Team">
 
-<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
-<link rel="manifest" href="img/site.webmanifest">
-<link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
-<link rel="shortcut icon" href="img/favicon.ico">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-config" content="img/browserconfig.xml">
-<meta name="theme-color" content="#ffffff">
 
+<!-- CSS -->
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -24,7 +16,21 @@
 <link rel="stylesheet" type="text/css" href="css/nivo-lightbox/default.css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-<!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />-->
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+
+<!-- ICONS -->
+<link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+<link rel="manifest" href="img/icons/site.webmanifest">
+<link rel="mask-icon" href="img/icons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="img/icons/favicon.ico">
+<meta name="apple-mobile-web-app-title" content="FIX MONT">
+<meta name="application-name" content="FIX MONT">
+<meta name="msapplication-TileColor" content="#2b5797">
+<meta name="msapplication-config" content="img/icons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
 
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -73,8 +79,8 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-6 col-md-offset-1">
-        <h3>Trošak za montažu i popravak namještaja</h3>
-        <p>Kontaktirajte nas za besplatnu procjenu troška.</p>
+        <h3>Zapošljavamo!</h3>
+        <p>Kontaktirajte nas ako ste zainteresirani.</p>
       </div>
       <div class="col-xs-12 col-md-4 text-center"><a href="#contact" class="btn btn-custom btn-lg page-scroll">Kontaktirajte nas</a></div>
     </div>
@@ -305,7 +311,6 @@
           <p>Nazovite nas ili ispunite formular za kontakt i odgovoriti ćemo vam na email najkraćem mogućem roku.</p>
         </div>
 
-        <!-- <form name="sentMessage" id="contactForm" method="POST" action="https://formspree.io/info@fix-mont.hr"> -->
         <form name="sentMessage" id="contactForm" novalidate>
           <div class="row">
             <div class="col-md-6">
@@ -335,10 +340,16 @@
         <h2>Kontakt</h2>
       </div>
       <div class="contact-item">
-        <p><span>Mobitel</span> +385 99 675 4504</p>
+        <p>
+            <span>Mobitel</span>
+            <a style="color: #b1bacc" href="tel:+385 99 675 4504">+385 99 675 4504</a>
+        </p>
       </div>
       <div class="contact-item">
-        <p><span>Email</span>info@fix-mont.hr</p>
+        <p>
+            <span>Email</span>
+            <a style="color: #b1bacc" href="mailto:info@fix-mont.hr">info@fix-mont.hr</a>
+        </p>
       </div> 
       <div class="contact-item">
         <p><span>Adresa</span>Stjepana Draganića 9<br>
@@ -352,8 +363,8 @@
 <!-- Footer Section -->
 <div id="footer">
   <div class="container text-center">
-    <p>&copy; 2019 FIX MONT</p>
-    <p>by methIT</p>
+    <p>&copy; FIX MONT 2019. Sva prava pridržana.</p>
+    <p>powered by methIT</p>
   </div>
 </div>
 <script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
@@ -363,6 +374,28 @@
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/contact_me.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
+<script>
+document.cookie="cookieconsent_dismissed=yes; path=/; domain=.fix-mont.hr";
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#252e39"
+    },
+    "button": {
+      "background": "#14a7d0"
+    }
+  },
+  "content": {
+    "message": "Služimo se kolačićima (eng. cookies) koji su nužni da ova web stranica funkcionira normalno i koji nam pomažu da web stranica bude informativna i prilagođena Vašim potrebama. Pritom Vas ne identificiramo.",
+    "dismiss": "OK",
+    "link": "Saznaj više",
+    "href": "https://fix-mont.hr/policy"
+  }
+})});
+</script>
 
 </body>
 </html>
