@@ -75,14 +75,14 @@ hr {
 	font-family: 'Montserrat', sans-serif;
 	font-size: 32px;
 	font-weight: 700;
-	color: #1f386e;
+	color: #4f4e4d;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 }
 #menu.navbar-default .navbar-nav > li > a {
 	font-family: 'Montserrat', sans-serif;
 	text-transform: uppercase;
-	color: #1f386e;
+	color: #4f4e4d;
 	font-size: 14px;
 	font-weight: 700;
 	padding: 8px 2px;
@@ -152,7 +152,7 @@ hr {
 }
 .btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
 	color: #fff;
-	background-color: #1f386e;
+	background-color: #4f4e4d;
 }
 .btn:active, .btn.active {
 	background-image: none;
@@ -195,7 +195,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	max-width: 600px;
 	margin: 0 auto;
 	margin-bottom: 40px;
-	background: rgba(0,0,0,.45);
+	background: rgba(0,0,0,.7);
 }
 header .intro-text {
 	padding-top: 200px;
@@ -206,7 +206,7 @@ header .intro-text {
 #get-touch {
 	padding: 40px 0 30px;
 	color: rgba(255,255,255,.7);
-	background: #1f386e;
+	background: #4f4e4d;
 }
 #get-touch h3 {
 	font-size: 24px;
@@ -220,7 +220,7 @@ header .intro-text {
 	border: 2px solid #fff;
 }
 #get-touch .btn-custom:hover {
-	color: #1f386e;
+	color: #4f4e4d;
 	background: #fff;
 	border: 2px solid #fff;
 }
@@ -381,7 +381,7 @@ header .intro-text {
 /* Contact Section */
 #contact {
 	padding: 100px 0 60px 0;
-	background: #1f386e;
+	background: #4f4e4d;
 	color: rgba(255,255,255,.65);
 }
 a[href^="tel"]{
